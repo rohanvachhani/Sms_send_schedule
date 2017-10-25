@@ -44,7 +44,7 @@ public class AddSmsActivity extends Activity {
 
     final private static String SMS_STATE = "SMS_STATE";
     final private static int REQUEST_CODE_ASK_MULTIPLE_PERMISSIONS = 124;
-    //runitime permisions from abovr 6.0 !!     /ROHAN VACHHANI
+    //runtime permissions from abovr 6.0 !!     /$/ROHAN VACHHANI
     final private String[] permissionsRequired = new String[]{
             Manifest.permission.READ_PHONE_STATE,
             Manifest.permission.SEND_SMS,
@@ -63,9 +63,9 @@ public class AddSmsActivity extends Activity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.menu_settings:
+           /* case R.id.menu_settings:
                 startActivityForResult(new Intent(this, com.rohan.sms_send_schedule.Activity.SmsSchedulerPreferenceActivity.class), 1);
-                break;
+                break;*/
         }
         return true;
     }
@@ -152,7 +152,7 @@ public class AddSmsActivity extends Activity {
         }
     }
 
-    public void scheduleSms(View view) {
+    public void scheduleSms(View view) {            //onclick schedule button...
         if (!validateForm()) {
             return;
         }

@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/menu_settings"
-        android:orderInCategory="100"
-        android:showAsAction="always"
-        android:title="@string/menu_settings"
-        android:icon="@android:drawable/ic_menu_view"/>
+        android:id="@+id/results"
+        android:orderInCategory="1"
+        android:title="Results"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/greetings"
+        android:orderInCategory="2"
+        android:title="Greetings"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/attendance"
+        android:orderInCategory="3"
+        android:title="Attendance"
+        app:showAsAction="never" />
 
 </menu>

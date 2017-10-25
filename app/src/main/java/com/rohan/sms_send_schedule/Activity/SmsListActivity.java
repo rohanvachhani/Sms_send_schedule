@@ -28,10 +28,16 @@ public class SmsListActivity extends ListActivity {
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == R.id.menu_settings) {
+    public boolean onOptionsItemSelected(MenuItem item) {                   //parent of all activities/...!because of thi menu
+       /* if (item.getItemId() == R.id.menu_settings) {
             startActivityForResult(new Intent(this, SmsSchedulerPreferenceActivity.class), 1);
+        }*/
+
+        if (item.getItemId() == R.id.results) {
+            //finish();      //if finish then back button will cause CRASH the app...!!!
+            startActivity(new Intent(getApplicationContext(), result_notify.class));
         }
+        //another 2 items greetings and attendance
         return true;
     }
 
@@ -101,8 +107,8 @@ public class SmsListActivity extends ListActivity {
                 this,
                 android.R.layout.simple_list_item_2,
                 DbHelper.getDbHelper(this).getCursor(),
-                new String[] { DbHelper.COLUMN_MESSAGE, DbHelper.COLUMN_RECIPIENT_NAME },
-                new int[] { android.R.id.text1, android.R.id.text2 }
+                new String[]{DbHelper.COLUMN_MESSAGE, DbHelper.COLUMN_RECIPIENT_NAME},
+                new int[]{android.R.id.text1, android.R.id.text2}
         );
         adapter.setViewBinder(new SimpleCursorAdapter.ViewBinder() {
             public boolean setViewValue(View view, Cursor cursor, int columnIndex) {
@@ -136,9 +142,9 @@ public class SmsListActivity extends ListActivity {
                 status = getString(R.string.list_status_failed);
         }
         datetime = DateUtils.formatDateTime(
-            this,
-            cursor.getLong(cursor.getColumnIndex(DbHelper.COLUMN_TIMESTAMP_SCHEDULED)),
-            DateUtils.FORMAT_SHOW_DATE | DateUtils.FORMAT_SHOW_TIME
+                this,
+                cursor.getLong(cursor.getColumnIndex(DbHelper.COLUMN_TIMESTAMP_SCHEDULED)),
+                DateUtils.FORMAT_SHOW_DATE | DateUtils.FORMAT_SHOW_TIME
         );
         return getString(R.string.list_sms_info_template, status, recipient, datetime);
     }
