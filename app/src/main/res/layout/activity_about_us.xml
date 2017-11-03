@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.rohan.sms_send_schedule.Activity.about_us">
+
+    <TextView
+        android:id="@+id/about_us"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:text="about us"
+        android:textAllCaps="true"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/about_us"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="Piyush Thummar\n15ce142@charusat.edu.in" />
+
+    <TextView
+        android:id="@+id/two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/one"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="Rohan Vachhani\n15ce146@charusat.edu.in" />
+
+    <TextView
+        android:id="@+id/three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/two"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="Yash Vaghani\n15ce147@charusat.edu.in" />
+</RelativeLayout>

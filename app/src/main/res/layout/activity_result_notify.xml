@@ -13,6 +13,17 @@
         android:layout_centerVertical="true"
         android:orientation="vertical">
 
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/form_sim_card_n"
+            android:layout_centerInParent="true"
+            android:padding="15dp"
+            android:text="In this Activity result of student send them individually on their registered mobile number.
+By clicking on attendance button, one can send the attendance to all the students individually.
+On clicking on Send Fees pending button, one can send the status of pending fees to individual students." />
+
         <RadioGroup
             android:id="@+id/form_sim_card_n"
             android:layout_width="match_parent"
@@ -34,19 +45,29 @@
 
 
         <Button
-            android:id="@+id/button_fetch"
+            android:id="@+id/button_result"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Fetch and Sim card details " />
+            android:onClick="sendResult"
+            android:text="Send Result " />
 
         <Button
-            android:id="@+id/button_send"
+            android:id="@+id/button_attendance"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Send "
-            android:onClick="sendResult"/>
+            android:onClick="sendAttendance"
+            android:text="Send Attendance" />
+
+        <Button
+            android:id="@+id/button_fees_detais"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:onClick="sendFees"
+            android:text="Send Fees Details" />
+
 
         <TextView
             android:id="@+id/info"

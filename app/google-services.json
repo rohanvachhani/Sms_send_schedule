@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "136420079085",
+    "firebase_url": "https://smartmessage-82ec9.firebaseio.com",
+    "project_id": "smartmessage-82ec9",
+    "storage_bucket": "smartmessage-82ec9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:136420079085:android:1d2ebc36e1cb4e22",
+        "android_client_info": {
+          "package_name": "com.rohan.sms_send_schedule"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "136420079085-akka67tj195gice925rqpbat8b5p1tei.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7aEh7sHDiB0Hf4emkvx1Snlq1NFP4Xwk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

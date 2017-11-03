@@ -19,7 +19,12 @@ public class Result_by_mail extends Activity {
     private Button buttonSend;
     private String mail_id[];
     private String sub[];
-    private String msg[];
+    private String contact_no[];
+    private String result[];
+    private String name[];
+    private String attendance[];
+    private String fees_pending[];
+    private final String SUB_OF_MAIL= "your Academic Information_by EMAIL";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,9 +39,12 @@ public class Result_by_mail extends Activity {
         buttonSend = (Button) findViewById(R.id.buttonSend);
         //Adding click listener
 
-        mail_id = new String[]{"rohan.vachhani5@gmail.com", "rohvac5@gmail.com", "tstrhn@gmail.com"};
-        sub = new String[]{"result1", "result2", "result3"};
-        msg = new String[]{"9.2", "8.2", "7.2"};
+        mail_id = new String[]{"rohan.vachhani5@gmail.com", "piyushthummar305@gmail.com", "bogharakuldip@gmail.com"};
+        sub = new String[]{SUB_OF_MAIL, SUB_OF_MAIL, SUB_OF_MAIL};
+        name = new String[]{"rohan", "second_student", "Third_student"};
+        result = new String[]{"9.2", "8.2", "10"};
+        attendance = new String[]{"60%", "80%", "90%"};
+        fees_pending = new String[]{"1000", "2000", "0"};
 
         buttonSend.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,7 +60,8 @@ public class Result_by_mail extends Activity {
 
         for (int i = 0; i < mail_id.length; i++) {
             SendMail sm;
-            sm = new SendMail(this, mail_id[i], sub[i], msg[i]);
+            String email = "Name: "+name[i] + "\nResult: "+ result[i] + "\nAttendance: "+ attendance[i] + "\nFees Pending: "+fees_pending[i];
+            sm = new SendMail(this, mail_id[i], sub[i],email);
             sm.execute();
         }
 

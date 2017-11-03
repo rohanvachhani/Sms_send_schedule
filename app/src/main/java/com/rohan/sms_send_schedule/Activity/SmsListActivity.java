@@ -42,6 +42,9 @@ public class SmsListActivity extends ListActivity {
         else if(item.getItemId() == R.id.results_mail){
             startActivity(new Intent(getApplicationContext(),Result_by_mail.class));
         }
+        else if(item.getItemId() == R.id.about_us){
+            startActivity(new Intent(getApplicationContext(),about_us.class));
+        }
         //another 2 items greetings and attendance
         return true;
     }

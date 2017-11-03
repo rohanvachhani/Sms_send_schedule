@@ -13,14 +13,10 @@
         android:title="Results By Email"
         app:showAsAction="never" />
     <item
-        android:id="@+id/greetings"
+        android:id="@+id/about_us"
         android:orderInCategory="3"
-        android:title="Greetings"
+        android:title="About Us"
         app:showAsAction="never" />
-    <item
-        android:id="@+id/attendance"
-        android:orderInCategory="4"
-        android:title="Attendance"
-        app:showAsAction="never" />
+
 
 </menu>

@@ -5,6 +5,14 @@
     android:layout_height="match_parent"
     tools:context="com.rohan.sms_send_schedule.Activity.Result_by_mail">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonSend"
+        android:layout_centerInParent="true"
+        android:padding="15dp"
+        android:text="In this Activity all the academic details about student are share them individually on their provided Email-Id." />
+
     <Button
         android:id="@+id/buttonSend"
         android:layout_width="wrap_content"

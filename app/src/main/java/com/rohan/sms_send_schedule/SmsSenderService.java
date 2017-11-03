@@ -37,7 +37,7 @@ public class SmsSenderService extends SmsIntentService {
         WakefulBroadcastReceiver.completeWakefulIntent(intent);
     }
 
-    private void sendSms(SmsModel sms) {
+    public void sendSms(SmsModel sms) {
         ArrayList<PendingIntent> sentPendingIntents = new ArrayList<>();
         ArrayList<PendingIntent> deliveredPendingIntents = new ArrayList<>();
         PendingIntent sentPendingIntent = getPendingIntent(sms.getTimestampCreated(), com.rohan.sms_send_schedule.SmsSentReceiver.class);
