@@ -13,7 +13,7 @@
         android:allowBackup="true"
         android:fullBackupContent="@xml/backup_scheme"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:icon="@mipmap/ic_launcher"
         android:supportsRtl="true">
         <activity
             android:name=".Activity.SmsListActivity"
@@ -40,6 +40,7 @@
             android:name=".Activity.about_us"
             android:label="About Us"
             android:parentActivityName=".Activity.SmsListActivity" />
+        <activity android:name=".Activity.add_student"></activity>
 
         <receiver
             android:name=".BootReceiver"
@@ -58,6 +59,7 @@
         <service android:name=".SmsSentService" />
         <service android:name=".SmsDeliveredService" />
         <service android:name=".UnscheduleService" />
+
 
     </application>
 

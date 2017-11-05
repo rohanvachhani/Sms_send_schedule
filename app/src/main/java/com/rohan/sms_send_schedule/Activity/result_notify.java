@@ -3,6 +3,9 @@ package com.rohan.sms_send_schedule.Activity;
 import android.app.Activity;
 import android.app.PendingIntent;
 import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -21,7 +24,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
-public class result_notify extends Activity {
+public class result_notify extends Activity{
 
     private Button button_send;
     private Button button_attendance;
@@ -39,6 +42,7 @@ public class result_notify extends Activity {
     private SmsModel sms;
     private ArrayList<SmsModel> sms_array;
     private static long time_var = 1;
+    private databaseHelper_students db;
 
 
     @Override
@@ -48,6 +52,31 @@ public class result_notify extends Activity {
 
         /*button_fetch.setOnClickListener(this);*/
         //for testing ..this will be done by fetching all students data from DATABASE..!
+        /*db = new databaseHelper_students(this);
+        db.add_student("15ce146", "rohan", "8153997302", "rohan.vachhani5@gmail.com", "9", "80%", "1500");
+        db.add_student("15ce142", "piyush", "9913617270", "piyushthummar305@gmail.com", "10", "90%", "1200");
+        db.add_student("15ce147", "yash", "9924049449", "yashvaghani44@gmail.com", "9.9", "85%", "500");
+        db.add_student("15ce009", "kuldip", "8758308387", "bogharakuldip@gmail.com", "8", "75%", "0");
+        Cursor cursor = db.getStudent();
+        if (cursor.moveToFirst()) {
+            int count = cursor.getCount();
+            contact_no = new String[count];
+            name = new String[count];
+            result = new String[count];
+            attendance = new String[count];
+            fees_pending = new String[count];
+            int i = 0;
+            do {
+                contact_no[i] = cursor.getString(cursor.getColumnIndex(databaseHelper_students.col_mobile_no));
+                name[i] = cursor.getString(cursor.getColumnIndex(databaseHelper_students.col_name));
+                result[i] = cursor.getString(cursor.getColumnIndex(databaseHelper_students.col_result));
+                attendance[i] = cursor.getString(cursor.getColumnIndex(databaseHelper_students.col_attendance));
+                fees_pending[i] = cursor.getString(cursor.getColumnIndex(databaseHelper_students.col_fees_pending));
+                i++;
+            } while (cursor.moveToNext());
+        }*/
+
+        //important comment
         contact_no = new String[]{"9099850038", "9913617270", "8758308387"};
         name = new String[]{"rohan", "second_student", "Third_student"};
         result = new String[]{"9.2", "8.2", "10"};
