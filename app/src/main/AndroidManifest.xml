@@ -12,8 +12,8 @@
     <application
         android:allowBackup="true"
         android:fullBackupContent="@xml/backup_scheme"
-        android:label="@string/app_name"
         android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
         android:supportsRtl="true">
         <activity
             android:name=".Activity.SmsListActivity"
@@ -30,17 +30,20 @@
         <activity android:name=".Activity.SmsSchedulerPreferenceActivity" />
         <activity
             android:name=".Activity.result_notify"
-            android:label="Result Notification"
+            android:label="Send Details By Sms"
             android:parentActivityName=".Activity.SmsListActivity" />
         <activity
             android:name=".Activity.Result_by_mail"
-            android:label="Send Result By Email"
+            android:label="Send Details By Email"
             android:parentActivityName=".Activity.SmsListActivity" />
         <activity
             android:name=".Activity.about_us"
             android:label="About Us"
             android:parentActivityName=".Activity.SmsListActivity" />
-        <activity android:name=".Activity.add_student"></activity>
+        <activity
+            android:name=".Activity.add_student"
+            android:label="Student Details"
+            android:parentActivityName=".Activity.SmsListActivity" />
 
         <receiver
             android:name=".BootReceiver"
@@ -60,7 +63,7 @@
         <service android:name=".SmsDeliveredService" />
         <service android:name=".UnscheduleService" />
 
-
+        <activity android:name=".Activity.DisplayDetails"></activity>
     </application>
 
 </manifest>

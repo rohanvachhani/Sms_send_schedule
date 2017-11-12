@@ -17,8 +17,6 @@ import com.rohan.sms_send_schedule.DbHelper;
 import com.rohan.sms_send_schedule.R;
 import com.rohan.sms_send_schedule.SmsModel;
 
-import static android.R.attr.data;
-
 public class SmsListActivity extends ListActivity {
 
     private final static int REQUEST_CODE = 1;
@@ -38,12 +36,12 @@ public class SmsListActivity extends ListActivity {
         if (item.getItemId() == R.id.results) {
             //finish();      //if finish then back button will cause CRASH the app...!!!
             startActivity(new Intent(getApplicationContext(), result_notify.class));
-        }
-        else if(item.getItemId() == R.id.results_mail){
-            startActivity(new Intent(getApplicationContext(),Result_by_mail.class));
-        }
-        else if(item.getItemId() == R.id.about_us){
-            startActivity(new Intent(getApplicationContext(),about_us.class));
+        } else if (item.getItemId() == R.id.results_mail) {
+            startActivity(new Intent(getApplicationContext(), Result_by_mail.class));
+        } else if (item.getItemId() == R.id.about_us) {
+            startActivity(new Intent(getApplicationContext(), about_us.class));
+        } else if (item.getItemId() == R.id.add_student) {
+            startActivity(new Intent(getApplicationContext(), add_student.class));
         }
         //another 2 items greetings and attendance
         return true;

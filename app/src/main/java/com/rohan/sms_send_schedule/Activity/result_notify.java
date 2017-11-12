@@ -4,8 +4,6 @@ import android.app.Activity;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -24,7 +22,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
-public class result_notify extends Activity{
+public class result_notify extends Activity {
 
     private Button button_send;
     private Button button_attendance;
@@ -38,17 +36,48 @@ public class result_notify extends Activity{
     private int FIRST_TIME = 0;
     private int s_id;
 
-
     private SmsModel sms;
-    private ArrayList<SmsModel> sms_array;
     private static long time_var = 1;
-    private databaseHelper_students db;
+    private databaseHelper_students myDb;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result_notify);
+
+        myDb = new databaseHelper_students(this);
+        Cursor res = myDb.getStudent();
+
+        int len = res.getCount();
+        name = new String[len];
+        contact_no = new String[len];
+        result = new String[len];
+        attendance = new String[len];
+        fees_pending = new String[len];
+
+        if (res.getCount() == 0) {
+            // show message
+            // showMessage("Error", "Nothing found");
+            Toast.makeText(getApplicationContext(), "no students..!!", Toast.LENGTH_SHORT).show();
+            return;
+        } else {
+            int i = 0;
+            while (res.moveToNext()) {
+
+           /* textView.append("Id :" + res.getString(res.getColumnIndex("id")) + "\n");*/
+                //textView.append("Student's Id No. :" + res.getString(res.getColumnIndex("c_id")) + "\n");
+                name[i] = res.getString(res.getColumnIndex("name"));
+                //  textView.append("Mail Id :" + res.getString(res.getColumnIndex("mail_ID")) + "\n");
+                contact_no[i] = res.getString(res.getColumnIndex("mobile_no"));
+                result[i] = res.getString(res.getColumnIndex("result"));
+                attendance[i] = res.getString(res.getColumnIndex("attendance"));
+                fees_pending[i] = res.getString(res.getColumnIndex("fees_pending"));
+                i++;
+            }
+
+        }
+
 
         /*button_fetch.setOnClickListener(this);*/
         //for testing ..this will be done by fetching all students data from DATABASE..!
@@ -77,11 +106,11 @@ public class result_notify extends Activity{
         }*/
 
         //important comment
-        contact_no = new String[]{"9099850038", "9913617270", "8758308387"};
+        /*contact_no = new String[]{"9099850038", "9913617270", "8758308387"};
         name = new String[]{"rohan", "second_student", "Third_student"};
         result = new String[]{"9.2", "8.2", "10"};
         attendance = new String[]{"60%", "80%", "90%"};
-        fees_pending = new String[]{"1000", "2000", "0"};
+        fees_pending = new String[]{"1000", "2000", "0"};*/
 
         sms = new SmsModel();
 

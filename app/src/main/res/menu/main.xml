@@ -17,6 +17,11 @@
         android:orderInCategory="3"
         android:title="About Us"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/add_student"
+        android:orderInCategory="4"
+        android:title="Add/View student"
+        app:showAsAction="never" />
 
 
 </menu>
