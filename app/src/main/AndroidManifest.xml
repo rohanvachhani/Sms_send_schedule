@@ -63,7 +63,8 @@
         <service android:name=".SmsDeliveredService" />
         <service android:name=".UnscheduleService" />
 
-        <activity android:name=".Activity.DisplayDetails"></activity>
+        <activity android:name=".Activity.DisplayDetails" />
+        <activity android:name=".Activity.BaseManuActivity"></activity>
     </application>
 
 </manifest>

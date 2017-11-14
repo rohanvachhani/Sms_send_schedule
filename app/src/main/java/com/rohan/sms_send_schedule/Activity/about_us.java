@@ -6,7 +6,7 @@ import android.os.Bundle;
 
 import com.rohan.sms_send_schedule.R;
 
-public class about_us extends Activity {
+public class about_us extends BaseManuActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

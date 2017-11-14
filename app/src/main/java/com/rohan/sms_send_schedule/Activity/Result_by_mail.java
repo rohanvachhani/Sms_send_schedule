@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 import com.rohan.sms_send_schedule.R;
 
-public class Result_by_mail extends Activity {
+public class Result_by_mail extends BaseManuActivity {
 
     //Declaring EditText
     private EditText editTextEmail;

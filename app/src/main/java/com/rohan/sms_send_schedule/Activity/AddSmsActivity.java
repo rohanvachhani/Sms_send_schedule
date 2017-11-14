@@ -36,7 +36,7 @@ import java.util.Arrays;
 import java.util.GregorianCalendar;
 import java.util.List;
 
-public class AddSmsActivity extends Activity {
+public class AddSmsActivity extends BaseManuActivity {
 
     final public static int RESULT_SCHEDULED = 1;
     final public static int RESULT_UNSCHEDULED = 2;

@@ -13,14 +13,14 @@
         android:title="Results By Email"
         app:showAsAction="never" />
     <item
-        android:id="@+id/about_us"
+        android:id="@+id/add_student"
         android:orderInCategory="3"
-        android:title="About Us"
+        android:title="Add/View student"
         app:showAsAction="never" />
     <item
-        android:id="@+id/add_student"
+        android:id="@+id/about_us"
         android:orderInCategory="4"
-        android:title="Add/View student"
+        android:title="About Us"
         app:showAsAction="never" />
 
 

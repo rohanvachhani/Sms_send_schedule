@@ -22,12 +22,8 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
-public class result_notify extends Activity {
+public class result_notify extends BaseManuActivity {
 
-    private Button button_send;
-    private Button button_attendance;
-    private Button button_fees;
-    private TextView textView_info;
     private String contact_no[];
     private String result[];
     private String name[];

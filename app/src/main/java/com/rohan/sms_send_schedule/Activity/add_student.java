@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 import com.rohan.sms_send_schedule.R;
 
-public class add_student extends Activity {
+public class add_student extends BaseManuActivity {
 
     databaseHelper_students db;
     EditText c_id;

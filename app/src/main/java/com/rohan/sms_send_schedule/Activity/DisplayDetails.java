@@ -8,7 +8,7 @@ import android.widget.Toast;
 
 import com.rohan.sms_send_schedule.R;
 
-public class DisplayDetails extends Activity {
+public class DisplayDetails extends BaseManuActivity {
 
     TextView textView;
     databaseHelper_students myDb;
