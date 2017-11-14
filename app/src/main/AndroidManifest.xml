@@ -30,20 +30,17 @@
         <activity android:name=".Activity.SmsSchedulerPreferenceActivity" />
         <activity
             android:name=".Activity.result_notify"
-            android:label="Send Details By Sms"
-            android:parentActivityName=".Activity.SmsListActivity" />
+            android:label="Send Details By Sms" />
         <activity
             android:name=".Activity.Result_by_mail"
-            android:label="Send Details By Email"
-            android:parentActivityName=".Activity.SmsListActivity" />
+            android:label="Send Details By Email" />
         <activity
             android:name=".Activity.about_us"
-            android:label="About Us"
-            android:parentActivityName=".Activity.SmsListActivity" />
+            android:label="About Us" />
         <activity
             android:name=".Activity.add_student"
-            android:label="Student Details"
-            android:parentActivityName=".Activity.SmsListActivity" />
+            android:label="Student Details" />
+        <activity android:name=".Activity.BaseManuActivity" />
 
         <receiver
             android:name=".BootReceiver"
@@ -64,7 +61,7 @@
         <service android:name=".UnscheduleService" />
 
         <activity android:name=".Activity.DisplayDetails" />
-        <activity android:name=".Activity.BaseManuActivity"></activity>
+
     </application>
 
 </manifest>
