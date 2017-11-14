@@ -6,5 +6,5 @@ package com.rohan.sms_send_schedule.Activity;
 
 public class Config {
     public static final String EMAIL = "tstrhn@gmail.com";
-    public static final String PASSWORD = "rohan@tstmail";
+    public static final String PASSWORD = "Your password goes here";
 }
